@@ -40,3 +40,25 @@ npm start
 ```
 
 ## HOW-TO-USE
+
+
+## API Endpoints
+* Inventory:  
+  * GET /inventorys - get a list of all the items in the inventory, add '?range=[a, b]' to url (query string) to get inventories in range from a to before b
+  * GET /inventorys/:id - get item with specific id
+  * POST /inventorys - create a new item in inventory with parameters:
+    * name
+    * desc
+    * warehouses: [{id: ObjectId}] - array of ids of warehouses that an inventory is assigned to, with the idea that a type of inventory can be available at many sites
+  * PUT /inventorys/:id - update inventory with specific id
+  * DELETE /inventorys/:id - delete (hide) inventory with specific id. We will not actually delete it, but to set its isHidden flag to true and hide it on client site.
+* Warehouse
+  * GET /warehouses - get a list of all warehouses, add '?range=[a, b]' to url (query string) to get warehouses in range from a to before b
+  * GET /warehouses/:id - get warehouse with specific id
+  * POST /warehouses - create a new warehouse with parameters:
+    * name - String
+    * address - String
+  * PUT /warehouses/:id - update warehouse with specific id
+  * DELETE /warehouses/:id - delete (hide) warehouse with specific id. We will not actually delete it, but to set its isHidden flag to true and hide it on client site.
+
+After installation, you can test the API by using the client site or Postman. Please let me innnnnnn.
