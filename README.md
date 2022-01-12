@@ -15,7 +15,9 @@ In case you do or have just installed it, you may:
 git clone https://github.com/theanh28/shopify-backend-challenge-summer-2022.git
 docker-compose up
 ```
-And wait a while (a long while) for the Docker images and containers are set up.
+And wait a while (a long while) for the Docker images and containers are set up (you can tell if the terminal stop changing, such as below:
+![Screenshot from 2022-01-12 17-07-15](https://user-images.githubusercontent.com/56032607/149230813-f4b1309a-7b51-4d31-b4ec-f10f14fb6ee6.png)
+
 Then the client site will be accessible at http://localhost:3000, while server is ready at http://localhost:3001.
 
 ### Non-Docker way
