@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  mongodb:
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=tester
+      - MONGO_INITDB_ROOT_PASSWORD=passwd
+      - MONGO_INITDB_DATABASE=spf
+    ports:
+      - "27017-27019:27017-27019"
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mmongo.js:ro
+      - ./mongo-volume:/data/db
+
+  server:
+    depends_on:
+      - mongodb
+    build: ./server
+    environment:
+      - MONGO_URL=mongodb://tester:passwd@mongodb:27017/spf
+      - PORT=3001
+      - NODE_ENV=development
+    ports:
+      - "3001:3001"
+
+  client:
+    depends_on:
+      - server
+    build: ./client
+    environment:
+      - REACT_APP_API_URL=http://localhost:3001
+      - REACT_APP_CURRENT_HOST=http://localhost:3000
+    ports:
+      - "3000:3000"
