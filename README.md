@@ -73,4 +73,10 @@ After you have created some Warehouses, you can find them assignable in Inventor
 ![image](https://user-images.githubusercontent.com/56032607/149071460-c066fd9f-de8f-4a81-b4d7-28914b501bd9.png)
 ![image](https://user-images.githubusercontent.com/56032607/149071424-61cd41a8-9992-49aa-822a-ffb114e7efa4.png)
 
+Last but not least, you can view the Inventories/Warehouses as well as clicking them to expand
+
+![image](https://user-images.githubusercontent.com/56032607/149071835-616a037c-ad03-4a42-bce3-63e8d56b9bde.png)
+![image](https://user-images.githubusercontent.com/56032607/149071861-0d34a221-1a6f-40e0-8242-3e10dd6b0584.png)
+
+
 You should find the rest of the UI easy to use. Happy new semester.
