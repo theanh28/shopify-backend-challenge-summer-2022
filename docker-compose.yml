@@ -16,10 +16,6 @@ services:
     depends_on:
       - mongodb
     build: ./server
-    environment:
-      - MONGO_URL=mongodb://tester:passwd@mongodb:27017/spf
-      - PORT=3001
-      - NODE_ENV=development
     ports:
       - "3001:3001"
 
@@ -27,8 +23,5 @@ services:
     depends_on:
       - server
     build: ./client
-    environment:
-      - REACT_APP_API_URL=http://localhost:3001
-      - REACT_APP_CURRENT_HOST=http://localhost:3000
     ports:
       - "3000:3000"
