@@ -16,7 +16,6 @@ git clone https://github.com/theanh28/shopify-backend-challenge-summer-2022.git
 docker-compose up
 ```
 And the client site will be accessible at http://localhost:3000, while server is ready at http://localhost:3001.
-You can now skip to HOW-TO-USE.
 
 ### Non-Docker way
 Download Node by following https://nodejs.org/en/.
@@ -39,9 +38,6 @@ npm install
 npm start
 ```
 
-## HOW-TO-USE
-
-
 ## API Endpoints
 * Inventory:  
   * GET /inventorys - get a list of all the items in the inventory, add '?range=[a, b]' to url (query string) to get inventories in range from a to before b
@@ -62,3 +58,19 @@ npm start
   * DELETE /warehouses/:id - delete (hide) warehouse with specific id. We will not actually delete it, but to set its isHidden flag to true and hide it on client site.
 
 After installation, you can test the API by using the client site or Postman. Please let me innnnnnn.
+
+## HOW-TO-USE client site
+![image](https://user-images.githubusercontent.com/56032607/149070788-e6648e99-f54d-42fa-8131-a15ffee9c3d5.png)
+
+When you first visit, both the Inventory and Warehouse tabs should be blank since no datas are in yet. 
+Feel free to create some Inventory and Warehouse by clicking the Add An Inventory/Warehouse button.
+
+![image](https://user-images.githubusercontent.com/56032607/149071133-1e10516a-5674-4df4-a896-ffe69d4ac730.png)
+![image](https://user-images.githubusercontent.com/56032607/149071244-a4de9758-2d5b-4840-ba0c-b1c912b36514.png)
+
+After you have created some Warehouses, you can find them assignable in Inventory Create (and later Inventory Edit)
+
+![image](https://user-images.githubusercontent.com/56032607/149071460-c066fd9f-de8f-4a81-b4d7-28914b501bd9.png)
+![image](https://user-images.githubusercontent.com/56032607/149071424-61cd41a8-9992-49aa-822a-ffb114e7efa4.png)
+
+You should find the rest of the UI easy to use. Happy new semester.
